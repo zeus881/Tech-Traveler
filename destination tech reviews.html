@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Tech Reviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        water: 'water 5s infinite',
+                        fadeIn: 'fadeIn 2s ease-in',
+                        popup: 'popup 0.5s ease-out',
+                    },
+                    keyframes: {
+                        water: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: 0 },
+                            '100%': { opacity: 1 },
+                        },
+                        popup: {
+                            '0%': { transform: 'scale(0.8)', opacity: 0 },
+                            '100%': { transform: 'scale(1)', opacity: 1 },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: url('https://wallpaperaccess.com/full/51221.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="bg-blue-900 bg-opacity-50 text-white py-4 shadow-lg animate-fadeIn">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-bold">Destination Tech</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:bg-transparent hover:text-gray-300 p-2 rounded">Home</a></li>
+                    <li><a href="#read-more" class="hover:bg-transparent hover:text-gray-300 p-2 rounded">Articles</a></li>
+                    <li><a href="contact us.html" class="hover:bg-transparent hover:text-gray-300 p-2 rounded">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <img src="/img/Black and White Modern Initial T Tech Logo.png " alt="Tech Traveler Watermark"
+     class="fixed bottom-10 right-10 opacity-10 w-48 h-auto  pointer-events-none z-[-1]">
+    
+    <section class="relative w-full h-[400px] flex items-center justify-center text-white text-center p-6 animate-fadeIn">
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg relative">
+            <h2 class="text-4xl font-bold">The Best Travel Tech for Exploring Japan’s High-Tech Culture</h2>
+            <p class="text-lg mt-4">Discover the must-have gadgets to enhance your travel experience in Japan.</p>
+            <a href="#read-more" class="mt-6 px-6 py-3 bg-blue-500 rounded-full text-white text-lg hover:bg-transparent border border-white relative top-6">Read More</a>
+        </div>
+    </section>
+    
+    <section id="read-more" class="container mx-auto py-12 px-6">
+        <h3 class="text-3xl font-semibold text-center mb-8 text-white">Essential Travel Tech Gadgets</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white bg-opacity-50 rounded-lg shadow-lg p-6 text-center text-white hover:bg-transparent">
+                <img src="img/portable WiFi hotspot device.webp" class="w-full rounded-md mb-4">
+                <h4 class="text-xl font-semibold">Portable Wi-Fi Router</h4>
+                <p class="mt-2">Stay connected wherever you go with a stable internet connection.</p>
+            </div>
+            <div class="bg-white bg-opacity-50 rounded-lg shadow-lg p-6 text-center text-white animate-popup hover:bg-transparent">
+                <img src="img/smart luggage.webp" class="w-full rounded-md mb-4">
+                <h4 class="text-xl font-semibold">Smart Luggage</h4>
+                <p class="mt-2">Track your bags with built-in GPS and ensure secure travels.</p>
+            </div>
+            <div class="bg-white bg-opacity-50 rounded-lg shadow-lg p-6 text-center  animate-popup text-white hover:bg-transparent">
+                <img src="img/futuristic noise-canceling headphones.webp" class="w-full rounded-md mb-4">
+                <h4 class="text-xl font-semibold">Noise-Canceling Headphones</h4>
+                <p class="mt-2">Enjoy peace and quiet on long journeys with top-tier audio.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="bg-gray-200 bg-opacity-30 py-12">
+        <div class="container mx-auto px-6 text-center animate-fadeIn">
+            <h3 class="text-3xl font-semibold">Get in Touch</h3>
+            <form class="mt-6 max-w-lg mx-auto bg-transparent p-6 rounded-lg shadow-lg animate-popup hover:bg-transparent">
+                <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 border rounded-md bg-transparent text-white placeholder-white">
+                <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 border rounded-md bg-transparent text-white placeholder-white">
+                <textarea placeholder="Your Message" class="w-full p-3 mb-4 border rounded-md bg-transparent text-white placeholder-white"></textarea>
+                <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-transparent border border-white">Send</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="bg-blue-900 bg-opacity-50 text-white py-4 text-center mt-8 animate-fadeIn">
+        <p>&copy; 2025  Tech Traveler Blog-Destination Tech Reviews | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        import * as THREE from 'three';
+
+function create3DAnimation() {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const geometry = new THREE.SphereGeometry(3, 32, 32);
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ffcc, wireframe: true });
+    const sphere = new THREE.Mesh(geometry, material);
+    scene.add(sphere);
+
+    camera.position.z = 10;
+
+    function animate() {
+        requestAnimationFrame(animate);
+        sphere.rotation.x += 0.01;
+        sphere.rotation.y += 0.01;
+        renderer.render(scene, camera);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+    });
+}
+
+create3DAnimation();
+    </script>
+</body>
+</html>

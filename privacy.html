@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Tech Traveler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 1s ease-in-out forwards; opacity: 0; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-gray-200 min-h-screen flex flex-col">
+    
+    <!-- Navbar -->
+    <nav class="bg-gray-800 bg-opacity-90 backdrop-blur-lg p-4 shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-cyan-400 hover:text-cyan-300 transition">Tech Traveler</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-cyan-300 transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-cyan-300 transition">About</a></li>
+                <li><a href="contact us.html" class="hover:text-cyan-300 transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <img src="/img/Black and White Modern Initial T Tech Logo.png " alt="Tech Traveler Watermark"
+    class="fixed bottom-10 right-10 opacity-10 w-auto h-auto  pointer-events-none z-[-1]">
+    
+    <!-- Main Content -->
+    <main class="container mx-auto p-8 bg-gray-800 bg-opacity-90 rounded-lg shadow-xl mt-20 fade-in">
+        <h1 class="text-4xl font-bold text-cyan-400 mb-6 text-center">Privacy Policy</h1>
+        <p class="mb-6 text-lg">Your privacy is important to us. This Privacy Policy outlines the types of information we collect and how we use and protect it.</p>
+        
+        <div class="space-y-6">
+            <div>
+                <h2 class="text-2xl font-semibold text-cyan-300">Information We Collect</h2>
+                <p class="mt-2">We collect personal information such as name, email address, and contact details when you use our services.</p>
+            </div>
+            
+            <div>
+                <h2 class="text-2xl font-semibold text-cyan-300">How We Use Information</h2>
+                <p class="mt-2">We use your information to provide and improve our services, communicate with you, and ensure security.</p>
+            </div>
+            
+            <div>
+                <h2 class="text-2xl font-semibold text-cyan-300">Data Protection</h2>
+                <p class="mt-2">We implement security measures to safeguard your personal data from unauthorized access.</p>
+            </div>
+        </div>
+
+<br>
+        <h1 class="text-4xl font-bold text-cyan-400 mb-6 text-center">Terms & Conditions</h1>
+        <p class="mb-6 text-lg"></p>
+        
+        <div class="space-y-6">
+            <div>
+                <h2 class="text-2xl font-semibold text-cyan-300">1. Acceptance of Terms</h2>
+                <p class="mt-2">By using our website, you accept and agree to these terms. If you do not agree, please refrain from using our services.</p>
+            </div>
+            
+            <div>
+                <h2 class="text-2xl font-semibold text-cyan-300">2. Use of the Website</h2>
+                <p class="mt-2">You must be at least 18 years old to use our services. You agree not to use the website for any unlawful purposes.</p>
+            </div>
+            
+            <div>
+                <h2 class="text-2xl font-semibold text-cyan-300">3. Intellectual Property</h2>
+                <p class="mt-2">All content, logos, and materials on this website are owned by or licensed to Tech Traveler.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-semibold text-cyan-300">4. User Conduct</h2>
+                <p class="mt-2">You agree not to upload, post, or share any content that is offensive, defamatory, or violates any laws.</p>
+            </div>
+            
+            <div>
+                <h2 class="text-2xl font-semibold text-cyan-300">5. Privacy Policy</h2>
+                <p class="mt-2">Your use of our website is also governed by our <a href="privacy-policy.html" class="text-cyan-300 hover:underline">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center p-6 mt-auto shadow-lg">
+        <p>&copy; 2025 Tech Traveler. All rights reserved.</p>
+    </footer>
+    
+
+    <script>
+        // Set up the 3D scene with Three.js
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / 2 / 400, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth / 2, 400);
+        document.getElementById('webgl-canvas').appendChild(renderer.domElement);
+
+        // Create a rotating cube
+        var geometry = new THREE.BoxGeometry();
+        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        var cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        camera.position.z = 5;
+
+        // Animation function
+        var animate = function () {
+            requestAnimationFrame(animate);
+
+            // Rotate the cube
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+        };
+
+        animate();
+
+        // Adjust the canvas size when window is resized
+        window.addEventListener('resize', function () {
+            renderer.setSize(window.innerWidth / 2, 400);
+            camera.aspect = window.innerWidth / 2 / 400;
+            camera.updateProjectionMatrix();
+        });
+    </script>
+</body>
+</html>
